@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+ul,
+li {
+    list-style: none;
+}
+html {
+    font-size: 100px;
+}
+i,
+b {
+    list-style: none;
+}
+body {
+    font-size: 16px;
+}
+$d-list: 320px 360px 375px 384px 412px 414px 768px 800px;
+$sign: 750px;
+@each $i in $d-list {
+    @media screen and (min-width:#{$i}) {
+        html {
+            font-size: 100px * $i / $sign;
+        }
+    }
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+#load{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/load.jpg) no-repeat center;
+    background-size:cover ;
+    z-index: 1000;
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.background {
+    background: url("../img/1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center top;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    filter:blur(10px);
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+}
+.b-zhao {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+}
+////////////////////////////////////
+.foot {
+    width: 100%;
+    height: 3.5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+.jindu {
+    width: 68%;
+    height: 0.1rem;
+    background: rgba(255,255,255,0.3);
+    margin: 10px auto;
+    position: relative;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    .pi {
+        width: 0.3rem;
+        height: 0.3rem;
+        border-radius: 50%;
+        position: absolute;
+        top: -0.1rem;
+        left: -0.15rem;
+        background: #FFCD2D;
+        z-index: 20;
+    }
+    .alltime {
+        position: absolute;
+        top: -0.12rem;
+        right: -1.2rem;
+        width: 1rem;
+        color: #FFFFFF;
+        text-shadow: 0 0 1px #000000;
+    }
+    .nowtime {
+        position: absolute;
+        top: -0.12rem;
+        left: -1rem;
+        height: 0.16rem;
+        width: 1rem;
+        color: #FFFFFF;
+        text-shadow: 0 0 1px #000000;
+    }
+    .jindu-2 {
+        width: 0;
+        height: 0.1rem;
+        background: #FFCD2D;
+        position: absolute;
+        z-index: 30;
+        border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
+}
+.play {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    text-align: center;
+    color: #FFCD2D;
+    text-align: center;
+    margin: 0.4rem auto 0;
+}
+.np {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.2rem;
+    color: #FFCD2D;
+    text-align: center;
+    margin: 0.4rem auto 0;
+    position: relative;
+    .one {
+        font-size: 1.2rem;
+    }
+    .next {
+        width: 0.8rem;
+        height: 0.8rem;
+        position: absolute;
+        top: 0.12rem;
+        right: -1.4rem;
+        span {
+            font-size: 0.8rem;
+        }
+    }
+    .prve {
+        width: 0.8rem;
+        height: 0.8rem;
+        position: absolute;
+        top: 0.12rem;
+        left: -1.4rem;
+        span {
+            font-size: 0.8rem;
+        }
+    }
+    .for {
+        width: 0.5rem;
+        height: 0.5rem;
+        position: absolute;
+        top: 0.12rem;
+        left: -2.5rem;
+        span {
+            font-size: 0.5rem;
+        }
+    }
+}
+#list {
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    top: 0.12rem;
+    right: -2.5rem;
+    span {
+        font-size: 0.5rem;
+    }
+}
+.header {
+    width: 100%;
+    height: 2rem;
+    padding: 0.2rem;
+    h3 {
+        text-align: center;
+        color: #FFFFFF;
+        padding-top: 0.5rem;
+        letter-spacing: 0.03rem;
+        opacity: 0.9;
+        font-size: 0.5rem;
+    }
+    p {
+        opacity: 0.7;
+        letter-spacing: 0.03rem;
+        padding-top: 0.1rem;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 0.15rem;
+    }
+}
+.foot-list {
+    width: 100%;
+    height: 1.6rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0.1rem 0.4rem 0.4rem;
+}
+.xin,
+.dele,
+.download,
+.volume {
+    width: 25%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    color: #FFFFFF;
+    line-height: 1.1rem;
+    opacity: 0.7;
+    span {
+        font-size: 0.4rem;
+    }
+}
+#lists {
+    position: fixed;
+    background: rgba(0,0,0,0.76);
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    left: 0;
+    padding: 0.3rem;
+    display: none;
+    z-index: 400;
+    .close {
+        float: right;
+    }
+    .dui {
+        float: left;
+    }
+    li {
+        width: 100%;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        color: #FFFFFF;
+        font-weight: 300;
+        font-size: 14px;
+        border-top: 1px dashed rgba(255,255,255,0.3);
+        span {
+            float: left;
+        }
+        p {
+            float: right;
+            font-size: 0.26rem;
+            color: #CBC7C2;
+        }
+    }
+    .active {
+        b {
+            display: block;
+            float: left;
+            width: 0.25rem;
+            height: 0.25rem;
+            margin: 0.2rem 0.3rem 0;
+            background: url("../img/music.gif") no-repeat;
+            background-size: cover;
+        }
+    }
+}
+.volice-f {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.4rem;
+    background: rgba(0,0,0,0.8);
+    padding: 0.4rem 0.2rem 0.2rem;
+    display: none;
+}
+.volice {
+    width: 60%;
+    height: 0.1rem;
+    background: rgba(255,255,255,0.3);
+    margin: 10px auto;
+    position: relative;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    .vi {
+        width: 0.3rem;
+        height: 0.3rem;
+        border-radius: 50%;
+        position: absolute;
+        top: -0.1rem;
+        right: -0.15rem;
+        background: #FFCD2D;
+        z-index: 20;
+    }
+}
+.stopvo {
+    position: absolute;
+    top: -0.2rem;
+    left: -0.7rem;
+    color: #FFCD2D;
+}
+.volice-2 {
+    width: 100%;
+    height: 0.1rem;
+    background: #FFCD2D;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+.quan {
+    width: 5rem;
+    height: 5rem;
+    background: red;
+    border: 3px solid rgba(0,0,0,0.3);
+    border-radius: 50%;
+    margin: 30px auto;
+    margin-top: 1rem;
+    box-shadow: 0 0 4px #CCCCCC;
+    background: url("../img/1.jpg") center no-repeat;
+    background-size: cover;
+}
+.quan-active {
+    animation: quan 100s linear infinite;
+    -webkit-animation:quan 100s linear infinite ;
+    -moz-animation: quan 100s linear infinite;
+}
+@keyframes quan {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(3600deg);
+    }
+}

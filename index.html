@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width" />
+		<!-- Add to homescreen for Safari on Ios -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="todo">
+		<link rel="apple-touch-icon" href="logolg.png">
+
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="todo">
+		<meta name="theme-color" content="#2F3BA2">
+		<link rel="icon" sizes="192x192" href="img/logo.jpg">
+		<title>音乐播放器</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css">
+		@font-face {
+		  font-family: 'iconfont';
+		  src: url('iconfont.eot');
+		  src: url('iconfont.eot?#iefix') format('embedded-opentype'),
+		  url('iconfont.woff') format('woff'),
+		  url('iconfont.ttf') format('truetype'),
+		  url('iconfont.svg#iconfont') format('svg');
+		}
+	</style>
+	<body>
+		<div id="load"></div>
+		<!--背景-->
+		<div class="background"></div>
+		<div class="b-zhao"></div>
+		<!--main-->
+		<audio src="music/偏爱.mp3" id="audio"></audio>
+		<!--header-->
+		<div class="header">
+			<h3></h3>
+			<p></p>
+		</div>
+		<!--bofang-->
+		<div class="quan-f" style="width: 100%;overflow: hidden;">
+			<div class="quan"></div>
+		</div>
+
+		<!--foot-->
+		<div class="foot">
+			<div class="jindu">
+				<div class="nowtime" id="nowtime"></div>
+				<div class="alltime" id="alltime"></div>
+				<div class="pi"></div>
+				<div class="jindu-2"></div>
+			</div>
+
+			<div class="np">
+				<div class="play">
+					<i class="iconfont one">&#xe602;</i>
+
+				</div>
+				<div class="next">
+					<span class="iconfont">&#xe64d;</span>
+				</div>
+				<div class="prve">
+					<span class="iconfont">&#xe64f;</span>
+				</div>
+				<div class="for">
+					<span class="iconfont">&#xe631;</span>
+				</div>
+				<div id="list">
+					<span class="iconfont">&#xe65a;</span>
+				</div>
+			</div>
+			<div class="foot-list">
+				<div class="xin">
+					<span class="iconfont">&#xe605;</span>
+				</div>
+				<div class="dele">
+					<span class="iconfont">&#xe61c;</span>
+				</div>
+				<div class="download">
+					<span class="iconfont">&#xe60a;</span>
+				</div>
+				<div class="volume">
+					<span class="iconfont">&#xe6d2;</span>
+				</div>
+			</div>
+
+		</div>
+		<div id="lists">
+			<div style="overflow: hidden;color: #FFFFFF;padding-bottom: 0.2rem;">
+				<div class="dui">播放队列</div>
+				<div class="close">关闭</div>
+			</div>
+			<div style="clear: both;"></div>
+			<ul>
+
+			</ul>
+		</div>
+		<div class="volice-f">
+			<div class="volice">
+				<div class="vi"></div>
+				<div class="stopvo">
+					<span class="iconfont">&#xe62a;</span>
+				</div>
+				<div class="volice-2"></div>
+			</div>
+		</div>
+	</body>
+
+</html>
